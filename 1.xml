@@ -4,7 +4,7 @@
       <list>
         <value>/bin/bash</value>
         <value>-c</value>
-        <value>echo "vulnerable" > /tmp/harmansectest.txt</value>
+        <value>echo "vulnerable" > /tmp/sectest.txt</value>
       </list>
     </constructor-arg>
   </bean>
